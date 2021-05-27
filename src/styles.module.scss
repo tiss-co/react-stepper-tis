@@ -1,0 +1,83 @@
+$font-family-medium: Helvetica-Neue-Medium;
+$bg-box-light: #ffffff;
+$bg-box-dark: #242526;
+$border-light: #d5d5d3;
+$border-dark: #4d535b;
+$font-light: #2a2a2a;
+$font-dark: #e5e6ec;
+$font-selected: #1977f2;
+$bg-selected: #1a76f2;
+
+.Container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  * {
+    transition: 0.5s;
+  }
+
+  .Step {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    .StepConnector {
+      height: 5px;
+      width: 60px;
+      border-top: 2px solid $border-light;
+      border-bottom: 2px solid $border-light;
+      background-color: $bg-box-light;
+      margin-left: -2px;
+      margin-right: -2px;
+      z-index: 2;
+    }
+
+    .StepLabel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $border-light;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: $bg-box-light;
+      padding: 10px;
+      font-family: $font-family-medium;
+      font-size: var(--font-size-x-small);
+      color: $font-light;
+      text-align: center;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .Selected {
+      background-color: $bg-selected;
+      color: #f7f7f7;
+    }
+  }
+
+  &.Dark {
+    .Step {
+      .StepConnector {
+        border-top: 2px solid $border-dark;
+        border-bottom: 2px solid $border-dark;
+        background-color: $bg-box-dark;
+      }
+
+      .StepLabel {
+        border: 2px solid $border-dark;
+        background-color: $bg-box-dark;
+        color: $font-dark;
+      }
+
+      .Selected {
+        background-color: $bg-selected;
+        color: #f7f7f7;
+      }
+    }
+  }
+}
