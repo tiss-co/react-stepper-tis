@@ -8,7 +8,7 @@ $font-dark: #e5e6ec;
 $font-selected: #1977f2;
 $bg-selected: #1a76f2;
 
-.Container {
+.Container_StepperTis {
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -19,13 +19,13 @@ $bg-selected: #1a76f2;
     transition: 0.5s;
   }
 
-  .Step {
+  .Step_StepperTis {
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
 
-    .StepConnector {
+    .StepConnector_StepperTis {
       height: 5px;
       width: 60px;
       border-top: 2px solid $border-light;
@@ -36,7 +36,7 @@ $bg-selected: #1a76f2;
       z-index: 2;
     }
 
-    .StepLabel {
+    .StepLabel_StepperTis {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,27 +54,27 @@ $bg-selected: #1a76f2;
       z-index: 1;
     }
 
-    .Selected {
+    .Selected_StepperTis {
       background-color: $bg-selected;
       color: #f7f7f7;
     }
   }
 
-  &.Dark {
-    .Step {
-      .StepConnector {
+  &.Dark_StepperTis {
+    .Step_StepperTis {
+      .StepConnector_StepperTis {
         border-top: 2px solid $border-dark;
         border-bottom: 2px solid $border-dark;
         background-color: $bg-box-dark;
       }
 
-      .StepLabel {
+      .StepLabel_StepperTis {
         border: 2px solid $border-dark;
         background-color: $bg-box-dark;
         color: $font-dark;
       }
 
-      .Selected {
+      .Selected_StepperTis {
         background-color: $bg-selected;
         color: #f7f7f7;
       }

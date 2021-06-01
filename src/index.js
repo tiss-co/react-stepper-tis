@@ -10,21 +10,21 @@ export const Stepper = ({
   onStepClick = () => { },
   darkMode = false
 }) => (
-  <div className={classNames(css.Container, {
-    [css.Dark]: darkMode
+  <div className={classNames(css.Container_StepperTis, {
+    [css.Dark_StepperTis]: darkMode
   }, className)}>
     {steps?.map((step, index) => (
-      <div className={css.Step} key={index}>
+      <div className={css.Step_StepperTis} key={index}>
         {index > 0 && (
           <div
-            className={classNames(css.StepConnector, {
-              [css.Selected]: index <= activeStepIndex,
+            className={classNames(css.StepConnector_StepperTis, {
+              [css.Selected_StepperTis]: index <= activeStepIndex,
             })}
           />
         )}
         <div
-          className={classNames(css.StepLabel, {
-            [css.Selected]: index <= activeStepIndex,
+          className={classNames(css.StepLabel_StepperTis, {
+            [css.Selected_StepperTis]: index <= activeStepIndex,
           })}
           onClick={() => onStepClick(index)}
         >
